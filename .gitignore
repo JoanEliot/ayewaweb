@@ -20,3 +20,4 @@ Thumbs.db
 /db.sqlite3
 /.dockerignore
 /ayewa/
+/media/
