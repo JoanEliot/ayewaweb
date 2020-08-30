@@ -19,3 +19,4 @@ Thumbs.db
 /Dockerfile
 /db.sqlite3
 /.dockerignore
+/ayewa/
