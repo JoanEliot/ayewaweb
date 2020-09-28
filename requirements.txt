@@ -4,3 +4,4 @@ whitenoise
 dj-database-url
 ayewa
 gunicorn
+psycopg2-binary
