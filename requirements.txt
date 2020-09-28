@@ -3,3 +3,4 @@ wagtail>=2.10.2,<2.11
 whitenoise
 dj-database-url
 ayewa
+gunicorn
