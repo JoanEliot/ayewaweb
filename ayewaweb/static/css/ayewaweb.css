@@ -5609,10 +5609,10 @@ a.text-dark:hover, a.text-dark:focus {
   background-size: cover;
   color: #ffffff; }
 
-.bg-home-hero {
-  background-image: url("../images/bg-hero-home.png");
-  background-attachment: fixed;
-  height: 300px; }
+/*.bg-home-hero {*/
+/*  background-image: url("../images/bg-hero-home.png");*/
+/*  background-attachment: fixed;*/
+/*  height: 300px; }*/
 
 .bg-home-hero-colorful {
   background-image: url("../images/bg-hero-colorful.png");
