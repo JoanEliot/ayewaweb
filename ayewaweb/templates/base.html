@@ -1,4 +1,4 @@
-{% load static wagtailuserbar %}
+{% load static wagtailuserbar navigation_tags %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -25,73 +25,16 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
-        <nav class="navbar navbar-expand-sm navbar-light">
-            <a class="navbar-brand" href="">
-                <img src="{% static 'images/ayewa-logo-nav.png' %}" width="100" height="36" alt="Ayewa">
-            </a>
-            <!-- button appears in XS -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navItems" aria-controls="navItems"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Wrap nav links in a toggler for mobile -->
-            <div class="collapse navbar-collapse" id="navItems">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Action</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Solutions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Science</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Other</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        {% include "ayewa/includes/navbar.html" %}
 
         <!-- Banner with search input -->
-        <div class="bg-image-full bg-home-hero-colorful">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-12">
-                    <h1 class="mt-6 text-center">aye&middot;wa | ā-w&auml; | our planet</h1>
-                    <p class="lead text-center">An exhaustive repository on causes, solutions and contacts.</p>
-                </div>
-            </div>
-            <!-- Search Form -->
-            <form>
-                <div class="form-row justify-content-center">
-                    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
-                        <select class="form-control">
-                            <option>All Categories</option>
-                            <option>Actions</option>
-                            <option>Solutions</option>
-                            <option>Science</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="col-xs-8 col-sm-8 col-md-7 col-lg-6">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="search" placeholder="Search here">
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-primary" type="button">Search</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <!-- end search form -->
-        </div>
-        </div>
-        <!-- end banner w/ search -->
+        {% include "ayewa/includes/searchbanner.html" %}
 
-        {% block content %}
-            <p>Hello world! This is the Bootstrap 3 Boilerplate.</p>
+        <div class="container mt-6 mb-6">
+            {% block content %}
         {% endblock content %}
+        </div>
+
 
     <!-- Footer -->
         <div class="container-fluid mt-5 footer">

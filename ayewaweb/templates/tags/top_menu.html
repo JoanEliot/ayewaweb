@@ -1,0 +1,11 @@
+{% load navigation_tags wagtailcore_tags %}
+{% get_site_root as site_root %}
+<ul class="navbar-nav mr-auto">
+{% for menuitem in menuitems %}
+    <li class="nav-item">
+      <a href="{% pageurl menuitem %}" class="nav-link">
+          {{ menuitem.title }}
+      </a>
+  </li>
+{% endfor %}
+</ul>

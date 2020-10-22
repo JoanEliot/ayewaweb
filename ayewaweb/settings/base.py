@@ -69,7 +69,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(PROJECT_DIR, 'templates'),
+            'ayewa/templates',
+            'ayewaweb/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -79,6 +80,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+                'gallery_tags': 'ayewa.templatetags.gallery_tags',
+                'navigation_tags': 'ayewa.templatetags.navigation_tags',
+            },
         },
     },
 ]
