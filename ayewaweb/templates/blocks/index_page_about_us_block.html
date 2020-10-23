@@ -1,0 +1,12 @@
+{% load wagtailimages_tags %}
+<div class="container">
+  <div class="row no-gutters bg-image-full bg-about-us">
+    <div class="col-7">
+      {{ self.text }}
+    </div>
+    <div class="col-5">
+        {% image self.image original as about_us_photo %}
+        <img src="{{ about_us_photo.url }}" alt="{{ about_us_photo.alt }}" class="img-fluid" />
+    </div>
+  </div>
+</div>

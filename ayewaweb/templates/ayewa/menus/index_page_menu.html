@@ -1,0 +1,13 @@
+{% load navigation_tags wagtailcore_tags menu_tags %}
+
+<div class="row no-gutters">
+{% for item in menu_items %}
+    <div class="col-md-6 col-lg-3">
+    <div class="home-category-card bg-home-card-actions bg-image-full">
+      <h4>{{ item.text }}</h4>
+      <p>{{ item.handle }}</p>
+      <a class="btn btn-outline" href="{{ item.href }}">Browse {{ item.text }}</a>
+    </div>
+  </div>
+{% endfor %}
+</div>

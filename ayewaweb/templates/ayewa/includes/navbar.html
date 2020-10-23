@@ -1,7 +1,7 @@
-{% load static wagtailuserbar navigation_tags %}
+{% load static menu_tags %}
 
 <nav class="navbar navbar-expand-sm navbar-light">
-    <a class="navbar-brand" href="">
+    <a class="navbar-brand" href="/">
         <img src="{% static 'images/ayewa-logo-nav.png' %}" width="100" height="36" alt="Ayewa">
     </a>
     <!-- button appears in XS -->
@@ -11,7 +11,6 @@
     </button>
     <!-- Wrap nav links in a toggler for mobile -->
     <div class="collapse navbar-collapse" id="navItems">
-        {% get_site_root as site_root %}
-        {% top_menu parent=site_root calling_page=self %}
+       {% main_menu max_levels=1 template="ayewa/menus/top_menu.html" %}
     </div>
 </nav>

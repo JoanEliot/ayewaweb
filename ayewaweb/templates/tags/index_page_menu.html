@@ -1,0 +1,43 @@
+{% load navigation_tags wagtailcore_tags %}
+{% get_site_root as site_root %}
+<div class="row no-gutters">
+{% for menuitem in menuitems %}
+    <div class="col-md-6 col-lg-3">
+    <div class="home-category-card bg-home-card-actions bg-image-full">
+      <h4>{{ menuitem.title }}</h4>
+      <p>{{ menuitem.nav_description }}</p>
+      <a class="btn btn-outline" href="">Browse {{ menuitem.title }}</a>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{#<div class="row no-gutters">#}
+{#  <div class="col-md-6 col-lg-3">#}
+{#    <div class="home-category-card bg-home-card-actions bg-image-full">#}
+{#      <h4>Action</h4>#}
+{#      <p>Find organizations and programs working to reverse climage change.</p>#}
+{#      <a class="btn btn-outline" href="">Browse Actions</a>#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="col-md-6 col-lg-3">#}
+{#    <div class="home-category-card bg-home-card-solutions bg-image-full">#}
+{#      <h4>Solutions</h4>#}
+{#      <p>See ways to reverse or adapt to climate change.</p>#}
+{#      <a class="btn btn-outline" href="">Browse Solutions</a>#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="col-md-6 col-lg-3">#}
+{#    <div class="home-category-card bg-home-card-science bg-image-full">#}
+{#    <h4>Science</h4>#}
+{#      <p>Find summary reports and raw data on how the climate is changing and what's in store for us as it does.</p>#}
+{#      <a class="btn btn-outline" href="">Browse Science</a>#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="col-md-6 col-lg-3">#}
+{#    <div class="home-category-card bg-home-card-other bg-image-full">#}
+{#      <h4>Other</h4>#}
+{#      <p>Find model laws, how-to instructions, and people.</p>#}
+{#      <a class="btn btn-outline" href="">Browse Other</a>#}
+{#    </div>#}
+{#  </div>#}
+{#</div>#}
