@@ -6,3 +6,4 @@ ayewa==0.7
 gunicorn
 psycopg2-binary
 whitenoise
+wagtailmenus
