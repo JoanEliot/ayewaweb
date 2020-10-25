@@ -21,3 +21,4 @@ Thumbs.db
 /.dockerignore
 /ayewa/
 /media/
+/ayewaweb/settings/local.py
