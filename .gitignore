@@ -22,3 +22,4 @@ Thumbs.db
 /ayewa/
 /media/
 /ayewaweb/settings/local.py
+/ayewaweb/settings/.env
