@@ -7,5 +7,6 @@ gunicorn
 psycopg2-binary
 whitenoise
 wagtailmenus
+django-environ
 django-storages
 boto3
