@@ -10,6 +10,8 @@ ALLOWED_HOSTS = ['*']
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 
 try:
     from .local import *

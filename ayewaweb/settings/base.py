@@ -13,6 +13,13 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import dj_database_url
+import environ
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+# reading .env file
+environ.Env.read_env()
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -25,7 +32,7 @@ ALLOWED_HOSTS = ['*']
 
 # Default secret key - override this in production DO NOT USE FOR PRODUCTION
 
-SECRET_KEY = '&6vr^v=yg0^$-3sts^+e26-**ae1(u@37yu@w0u%l1bco^n8d8'
+SECRET_KEY = env('SECRET_KEY')
 
 # Application definition
 
@@ -49,6 +56,7 @@ INSTALLED_APPS = [
     'wagtailmenus',
     'modelcluster',
     'taggit',
+    'storages',
 
     'django.contrib.admin',
     'django.contrib.auth',
