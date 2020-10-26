@@ -8,11 +8,4 @@
     {{ page.intro|richtext }}
     {% main_menu max_levels=1 template="ayewa/menus/index_page_menu.html" %}
     {{ page.body }}
-
-{#    {% for post in page.get_children %}#}
-{#        <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>#}
-{#        {{ post.specific.intro }}#}
-{#        {{ post.specific.body|richtext }}#}
-{#    {% endfor %}#}
-
 {% endblock %}

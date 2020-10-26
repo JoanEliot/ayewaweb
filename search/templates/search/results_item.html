@@ -1,0 +1,15 @@
+{% load wagtailcore_tags %}
+
+<div class="search-result">
+    <h4><a href="{% pageurl result %}">{{ result.title }}</a></h4>
+    <p class="mb-3">{{ result.intro }}</p>
+    <div class="mb-1"><span class="badge badge-success">Action</span></div>
+    <ul class="related-content">
+        <li>Related Content:</li>
+        <!-- loop -->
+        <li><a class="green" href="#">Related Action</a></li>
+        <li><a class="blue" href="#">Related Science</a></li>
+        <li><a class="purple" href="#">Related Solution</a></li>
+        <li><a class="darkblue" href="#">Related Other</a></li>
+    </ul>
+</div>
